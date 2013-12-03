@@ -9,7 +9,7 @@ Setup
 1. Set up a virtual environment (Python 2 or 3 will work)
 2. Activate the virtual environment
 3. Install all requirements( `pip install -r requirements.txt` )
-4. Run the application ( `python mag2tor.py` )
+4. Run the application ( `python app.py` )
 
 Usage
 -----

@@ -1,10 +1,12 @@
-from bottle import route, run, request, redirect
+from bottle import Bottle, route, run, request, redirect
 import re
 
 HASH_RE = re.compile(".+xt=urn:btih:([^&]+).*")
 TOR_CACHE = "http://torrage.com/torrent/{}.torrent"
 
-@route('/')
+app = application = Bottle()
+
+@app.route('/')
 def index():
     link = request.query.get("l")
     if not link:
@@ -22,4 +24,4 @@ def do_link(info_hash):
     redirect(TOR_CACHE.format(info_hash.upper()))
 
 if __name__ == "__main__":
-    run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8080)
