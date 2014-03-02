@@ -10,6 +10,17 @@ htmlblob = """
 <html>
   <head>
     <title>Mag2Tor</title>
+    <style type="text/css">
+        body {{
+            color: 000000;
+            background-color: FFFFFF;
+            text-decoration: none;
+            font-family: 'arial', 'sans-serif';
+        }}
+        p#error {{
+            color: FF000000;
+        }}
+    </style>
   </head>
   <body>
     <p>This service will take a magnet link and allow you to save the corresponding torrent file.</p>
@@ -17,7 +28,7 @@ htmlblob = """
       <p>Enter the magnet link: <input type='text' name=l>
       <input type='Submit' value='Convert'></p>
     </form>
-    <p>{0}</p>
+    <p id='error' >{0}</p>
 </html>"""
 
 @app.route('/')
