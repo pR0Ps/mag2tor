@@ -7,28 +7,73 @@ TOR_CACHE = "http://torrage.com/torrent/{}.torrent"
 app = application = Bottle()
 
 htmlblob = """
+<DOCTYPE HTML>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="description" content="Magnet link to torrent converter">
+    <meta name="keywords" content="magnet, torrent, convert, converter">
     <title>Mag2Tor</title>
     <style type="text/css">
-        body {{
-            color: 000000;
-            background-color: FFFFFF;
-            text-decoration: none;
-            font-family: 'arial', 'sans-serif';
-        }}
-        p#error {{
-            color: FF000000;
-        }}
+      body {{
+        color: #000000;
+        background-color: #FFFFFF;
+        text-decoration: none;
+        font-family: 'arial', 'sans-serif';
+      }}
+      main {{
+        text-align: center;
+        margin-top: 100px;
+      }}
+      img#gh-banner {{
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
+      }}
+      p#error {{
+        color: #FF0000;
+        display: none; /* for now */
+      }}
+      footer {{
+          position: absolute;
+          bottom: 50px;
+          right: 50px;
+      }}
+      input {{
+        padding:5px 15px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }}
+      input[type=text] {{
+        width: 570px;
+        border:2px solid
+        border-color: #ccc;
+      }}
+      input[type=text]:focus {{
+        border-color:#333;
+      }}
+      input[type=submit] {{
+        cursor:pointer;
+        background:#ccc;
+        border: 2px none;
+        margin: 10px 5px 10px 5px;
+        height: 30px;
+      }}
     </style>
   </head>
   <body>
-    <p>This service will take a magnet link and allow you to save the corresponding torrent file.</p>
-    <form>
-      <p>Enter the magnet link: <input type='text' name=l>
-      <input type='Submit' value='Convert'></p>
-    </form>
+    <main>
+      <h1>Mag2Tor</h1>
+      <a href="https://github.com/pR0Ps/mag2tor"><img id="gh-banner" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+      <p>Enter a magnet link below to be redirected to the corresponding torrent file.</p>
+      <form>
+        <input type='text' placeholder='Magnet link' name='l'><br>
+        <input type='Submit' value='Convert'>
+      </form>
+    </main>
     <p id='error' >{0}</p>
+    <footer>Made by <a href="http://cmetcalfe.ca">Carey Metcalfe</a></footer>
 </html>"""
 
 @app.route('/')
