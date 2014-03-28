@@ -14,4 +14,6 @@ Setup
 Usage
 -----
 
-Visit `http://[host]/?l=[magnet link]` in a browser
+Visit `http://[host]` in a browser, enter a magnet link and click convert.
+
+To skip having to load the page and enter the link, go to `http://[host]/?l=[magnet link]` instead.
