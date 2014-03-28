@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from bottle import Bottle, route, run, request, redirect
 import re
 
