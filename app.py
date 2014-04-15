@@ -49,7 +49,8 @@ HTMLBLOB = """
         border:2px solid
       }}
       input[type=text] {{
-        width: 570px;
+        max-width: 570px;
+        width: 80%;
         border-color: #555555;
       }}
       input[type=text].error {{
