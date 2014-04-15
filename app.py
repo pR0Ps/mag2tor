@@ -15,6 +15,7 @@ HTMLBLOB = """
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="description" content="Magnet link to torrent converter">
     <meta name="keywords" content="magnet, torrent, convert, converter">
+    <meta name="viewport" content="width=device-width">
     <title>Mag2Tor</title>
     <style type="text/css">
       body {{
@@ -38,15 +39,14 @@ HTMLBLOB = """
         border: 0;
       }}
       footer {{
-          position: absolute;
-          bottom: 50px;
-          right: 50px;
+        padding: 25px;
+        text-align: center;
       }}
       input {{
         padding:5px 15px;
         -webkit-border-radius: 5px;
         border-radius: 5px;
-        border:2px solid
+        border:2px solid;
       }}
       input[type=text] {{
         max-width: 570px;
