@@ -54,7 +54,7 @@ HTMLBLOB = """
         border-color: #555555;
       }}
       input[type=text].error {{
-          border-color: #FF0000;
+        border-color: #FF0000;
       }}
       input[type=submit] {{
         cursor:pointer;
