@@ -4,7 +4,7 @@ from bottle import Bottle, route, run, request, redirect
 import re
 
 HASH_RE = re.compile(".+xt=urn:btih:([^&]+).*")
-TOR_CACHE = "http://torrage.com/torrent/{}.torrent"
+TOR_CACHE = "https://itorrents.org/torrent/{}.torrent"
 
 app = application = Bottle()
 
